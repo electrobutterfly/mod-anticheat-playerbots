@@ -20,6 +20,9 @@
  *LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *SOFTWARE.
+ 
+ - Fixed 2026 by Klaus Simon (github@electrobutterfly.com) to stop annoying playerbots broadcasts to GMs
+ 
  */
 
 #ifndef SC_ACMGR_H

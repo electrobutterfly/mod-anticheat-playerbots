@@ -103,6 +103,11 @@ void AnticheatMgr::DoToAllGMs(std::function<void(Player*)> exec)
 
 void AnticheatMgr::StartHackDetection(Player* player, MovementInfo movementInfo, uint32 opcode)
 {
+    // Skip headless sessions (e.g. mod-playerbots bots). These have no real client,
+    // so movement packets are AI-generated and will produce constant false positives.
+    if (player->GetSession()->IsHeadless())
+        return;
+
     if (!sConfigMgr->GetOption<bool>("Anticheat.Enabled", true))
         return;
 
